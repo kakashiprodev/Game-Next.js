@@ -79,16 +79,16 @@ const Dashboard = () => {
             </div>
             <TabsContent
               value="week"
-              className="bg-[#21201F] mt-[8px] rounded-[10px] border border-[#292828] h-[287px]"
-            ></TabsContent>
+              className="bg-[#21201F] py-2 px-4 mt-[8px] rounded-[10px] border border-[#292828] h-[287px]"
+            >Dashboard for week</TabsContent>
             <TabsContent
               value="month"
-              className="bg-[#21201F] rounded-[10px] border border-[#292828] h-[287px]"
-            ></TabsContent>
+              className="bg-[#21201F] py-2 px-4 rounded-[10px] border border-[#292828] h-[287px]"
+            >Dashboard for month</TabsContent>
             <TabsContent
               value="year"
-              className="bg-[#21201F] rounded-[10px] border border-[#292828] h-[287px]"
-            ></TabsContent>
+              className="bg-[#21201F] py-2 px-4 rounded-[10px] border border-[#292828] h-[287px]"
+            >Dashboard for year</TabsContent>
           </Tabs>  
           </div>
         </div>

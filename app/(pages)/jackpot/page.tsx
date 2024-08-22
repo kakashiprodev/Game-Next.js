@@ -12,6 +12,7 @@ import Spinner from "./_partials/Spinner";
 import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
 import PurchaseScrapDialog from "@/components/common/PurchaseScrapDialog";
 import ShopDialogJoinContent from "@/components/common/ShopDialogJoinContent";
+import InventoryDialog from "@/components/common/InventoryDialog";
 const wins = ["biggest", "recent", "lucky"];
 const history = [
     {
@@ -209,7 +210,8 @@ const JackpotPage = () => {
                                         JOIN JACKPOT
                                     </Button>
                                 </DialogTrigger>
-                                <PurchaseScrapDialog />
+                                <InventoryDialog />
+                                {/* <PurchaseScrapDialog /> */}
                             </Dialog>
                             <Dialog>
                                 <DialogTrigger asChild>
@@ -360,7 +362,8 @@ const JackpotPage = () => {
                                     JOIN JACKPOT
                                 </Button>
                             </DialogTrigger>
-                            <ShopDialogJoinContent />
+                            <InventoryDialog />
+                            {/* <ShopDialogJoinContent /> */}
                         </Dialog>
                         <Dialog>
                             <DialogTrigger asChild>

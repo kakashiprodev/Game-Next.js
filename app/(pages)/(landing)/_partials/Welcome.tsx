@@ -11,6 +11,9 @@ import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
 import ShopDialogJoinContent from "@/components/common/ShopDialogJoinContent";
 import BackVideoPlayer from "@/components/common/ReactPlayer";
 import InventoryDialog from "@/components/common/InventoryDialog";
+import StartCoinModal from "@/components/common/StartCoinModal";
+import StartGameDialog from "@/components/common/StartGameDialog";
+import { Link } from "lucide-react";
 const Welcome = () => {
     return (
         <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-4">
@@ -46,7 +49,8 @@ const Welcome = () => {
                             </Button>
                                     
                                 </DialogTrigger>
-                                <InventoryDialog />
+                                <StartGameDialog />
+                                {/* <InventoryDialog /> */}
                                 {/* <ShopDialogJoinContent/> */}
                             </Dialog>
                             <div className="flex gap-[5px] font-medium text-[14px]">

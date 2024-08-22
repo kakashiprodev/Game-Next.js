@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { DialogContent, DialogTrigger } from "../ui/dialog";
 import Image from "next/image";
