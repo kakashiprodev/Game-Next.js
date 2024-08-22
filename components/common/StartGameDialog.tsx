@@ -6,6 +6,7 @@ import { Button } from "../ui/Button";
 import { Dialog, DialogTitle } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import StartCoinModal from "./StartCoinModal";
+import RandomCoinModal from "./RandomCoinModal";
 
 const item = {
     times: 5,
@@ -88,7 +89,7 @@ const StartGameDialog = () => {
                     </DialogTrigger>
                     {(isSelect.red !== "" || isSelect.white !== "") &&
                     !isSelect.isModal ? (
-                        <StartCoinModal />
+                        <RandomCoinModal />
                     ) : (
                         ""
                     )}

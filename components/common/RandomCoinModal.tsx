@@ -4,6 +4,7 @@ import Image from "next/image";
 import Levelcard from "./Levelcard";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Button } from "../ui/Button";
 const item = {
     times: 5,
     amount: 12435.56,
@@ -11,12 +12,12 @@ const item = {
 interface SettingProps {
     color: Boolean;
 }
-const StartCoinModal = () => {
+const RandomCoinModal = () => {
     const itemsArray = Array.from({ length: 40 });
     return (
         <DialogContent className="w-fit border-none flex flex-col">
             <VisuallyHidden>
-                <DialogTitle>StartCoinModal</DialogTitle>
+                <DialogTitle>RandomCoinModal</DialogTitle>
             </VisuallyHidden>
             <div className="flex flex-col justify-center align-middle items-center bg-[#1A1A19] pt-[16px] pb-[18.5px] px-[32.58px] border border-[#272625] rounded-2xl">
                 <Image
@@ -26,13 +27,17 @@ const StartCoinModal = () => {
                     className=" mb-[30px]"
                     alt="logo"
                 />
-                <Image
+                <Button className="!rounded-lg my-[34px]" variant={"secondary"}>
+                    <h2 className="text-gradient bg-gradient-to-t from-[#FFB9BE] to-[#FFFF]">
+                        Call A BOt
+                    </h2>
+                </Button>
+                {/* <Image
                     src={"/assets/icons/redCoin.png"}
                     height={105}
                     width={105}
                     alt="Rcoin"
-                    className="cursor-pointer"
-                />
+                /> */}
                 {/* {color ? (
                     <Image
                         src={"/assets/icons/blackCoin.png"}
@@ -71,19 +76,22 @@ const StartCoinModal = () => {
                         <div className=" relative py-[6px] px-6 flex flex-col gap-1 pt-2 rounded-xl bg-[#21201F] bluegradient ">
                             <div className="flex gap-3">
                                 <h2 className="text-[16px] font-fredoka font-medium leading-[21.6px] ">
-                                    pnc
+                                    waiting...
                                 </h2>
-                                <Levelcard number={45} variant="secondary" />
+                                <Levelcard number={0} variant="primary" />
                             </div>
                             <h2 className="text-[#1D4FFF] text-[14px] text-center">
-                                60%
+                                0%
                             </h2>
-                            <div className=" absolute -top-5 -right-24 rounded-full w-[104px] h-[104px] border-none bg-blueliear p-[4px]">
-                                <img
+                            <div className=" absolute -top-5 -right-24 rounded-full w-[104px] h-[104px] border-none  bg-[#21201F]  p-[4px]">
+                                {/* <img
                                     src="/assets/images/equity.png"
                                     className="rounded-full w-24 h-24"
                                     alt="R"
-                                />
+                                /> */}
+                                <h2 className="text-[50px] text-center w-full pt-3">
+                                    ?
+                                </h2>
                             </div>
                         </div>
                     </div>
@@ -144,22 +152,14 @@ const StartCoinModal = () => {
                     </div>
                 </div>
                 <div className="relative bg-[#1A1A19] border border-[#272625] rounded-2xl">
-                    <div className=" absolute py-[6px] px-6 flex flex-col gap-1 pt-2 rounded-xl bg-[#21201F] bluegradient w-[120px] h-[60px] right-[50px] m-[14px]">
+                    <div className=" absolute py-[6px] px-6 flex flex-col gap-1 pt-2 rounded-xl   w-[120px] h-[60px] right-[50px] m-[14px]">
                         <div className="flex gap-3">
-                            <h2 className="text-[16px] font-fredoka font-medium leading-[21.6px] ">
-                                pnc
-                            </h2>
-                            <Levelcard number={45} variant="secondary" />
+                            <h2 className="text-[16px] font-fredoka font-medium leading-[21.6px] "></h2>
+                            {/* <Levelcard number={45} variant="secondary" /> */}
                         </div>
-                        <h2 className="text-[#1D4FFF] text-[14px] text-center">
-                            60%
-                        </h2>
-                        <div className="absolute top-0 rounded-full w-[64px] h-[64px] border-none bg-blueliear p-[4px] right-[-50px]">
-                            <img
-                                src="/assets/images/equity.png"
-                                className="rounded-full w-[60px] h-[60px]"
-                                alt="R"
-                            />
+                        <h2 className="text-[#1D4FFF] text-[14px] text-center"></h2>
+                        <div className="absolute top-0 rounded-full w-[64px] h-[64px] border-none bg-[#21201F] p-[4px] right-[-50px]">
+                            <div className="rounded-full w-[60px] h-[60px]" />
                         </div>
                     </div>
                     <div className="grid grid-cols-3 gap-[15px] p-[15px] mt-[74px]">
@@ -176,4 +176,4 @@ const StartCoinModal = () => {
     );
 };
 
-export default StartCoinModal;
+export default RandomCoinModal;

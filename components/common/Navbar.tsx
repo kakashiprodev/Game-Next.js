@@ -58,15 +58,7 @@ const Navbar = () => {
                         {navbtn.map((nav, idx) => (
                             <Link
                                 key={idx}
-                                href={
-                                    idx === 0
-                                        ? isJackpot
-                                            ? "/jackpot"
-                                            : "/"
-                                        : nav.name
-                                              .toLowerCase()
-                                              .replace(/ /, "-")
-                                }
+                                href={nav.name.toLowerCase().replace(/ /, "-")}
                                 className="bg-[#1a1a18] rounded-full flex items-center gap-[9px] border border-[#2A2A28] p-2"
                                 onClick={
                                     idx === 0

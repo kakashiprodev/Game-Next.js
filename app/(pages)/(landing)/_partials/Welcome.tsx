@@ -13,7 +13,7 @@ import BackVideoPlayer from "@/components/common/ReactPlayer";
 import InventoryDialog from "@/components/common/InventoryDialog";
 import StartCoinModal from "@/components/common/StartCoinModal";
 import StartGameDialog from "@/components/common/StartGameDialog";
-import { Link } from "lucide-react";
+import Link from "next/link";
 const Welcome = () => {
     return (
         <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-4">
@@ -36,21 +36,20 @@ const Welcome = () => {
                     <div className="absolute w-full h-8 backcolor bottom-0 right-0 z-20" />
                     <Homebg className="absolute top-0 right-0 z-10 hidden md:block" />
                     <div className="flex gap-[31px] flex-col">
-                        <div className="font-medium text-[26px] lg:text-[30px]">
+                        <div className="font-medium text-[26px] lg:text-[30px] lg:py-2">
                             Welcome back, admin01
                         </div>
                         <div className="flex items-center gap-7">
                             <Dialog>
                                 <DialogTrigger asChild>
-                            <Button variant="secondary">
-                                <h2 className="text-gradient bg-gradient-to-t from-[#FFB9BE] to-[#FFFF]">
-                                    create your coinflip
-                                </h2>
-                            </Button>
-                                    
+                                    <Button variant="secondary">
+                                        <h2 className="text-gradient bg-gradient-to-t from-[#FFB9BE] to-[#FFFF]">
+                                            create your coinflip
+                                        </h2>
+                                    </Button>
                                 </DialogTrigger>
-                                <StartGameDialog />
-                                {/* <InventoryDialog /> */}
+                                {/* <StartGameDialog /> */}
+                                <InventoryDialog />
                                 {/* <ShopDialogJoinContent/> */}
                             </Dialog>
                             <div className="flex gap-[5px] font-medium text-[14px]">
@@ -80,7 +79,9 @@ const Welcome = () => {
             </div>
             <div className="relative md:w-1/2">
                 <div className="h-full px-2 z-30 relative gap-[34px] bg-[#21201F] border-[#292828] border rounded-[32px]">
-                    <BackVideoPlayer/>
+                    <Link href={"/jackpot"} className="z-50">
+                        <BackVideoPlayer />
+                    </Link>
                 </div>
                 <div className="rounded-[32px] hidden md:block absolute -bottom-[10px] z-10 bg-[#21201F] w-[89%] left-8 h-[18px]"></div>
             </div>

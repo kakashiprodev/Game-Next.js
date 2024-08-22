@@ -11,6 +11,7 @@ import Inventory from "@/public/assets/svg/inventory.svg";
 import { Dialog, DialogTitle, DialogTrigger } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import PurchaseScrapDialog from "./PurchaseScrapDialog";
+import StartGameDialog from "./StartGameDialog";
 
 const item = {
     times: 5,
@@ -100,26 +101,25 @@ const InventoryDialog = () => {
                         <Dialog>
                             <DialogTrigger asChild>
                                 <Button
-                                    className="!rounded-lg"
                                     variant={"secondary"}
+                                    className="!h-[35px]"
                                 >
-                                    <Button
-                                        variant={"secondary"}
-                                        className="!h-[35px]"
-                                    >
-                                        join jackpot
-                                    </Button>
+                                    join jackpot
                                 </Button>
                             </DialogTrigger>
                             <PurchaseScrapDialog />
                         </Dialog>
-
-                        <Button
-                            variant={"outline"}
-                            className="border border-[#292828] bg-[#21201F] rounded-[10px] tracking-widest"
-                        >
-                            create coinflip
-                        </Button>
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button
+                                    variant={"outline"}
+                                    className="border border-[#292828] bg-[#21201F] rounded-[10px] tracking-widest"
+                                >
+                                    create coinflip
+                                </Button>
+                            </DialogTrigger>
+                            <StartGameDialog />
+                        </Dialog>
                     </div>
                 </div>
             </div>
