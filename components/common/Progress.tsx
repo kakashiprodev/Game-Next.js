@@ -40,8 +40,8 @@ const Progress: React.FC<progressType> = ({ done, height }) => {
         style={{ ...style, height: height }}
       >
         {height>30?
-          <ProgressBig className="absolute -top-24 rounded-[12px] inset-0 opacity-10 brightness-200"  />:
-        <ProgressPic className="absolute rounded-[12px] inset-0 opacity-20  "  />}
+          <ProgressBig className="absolute -top-[15px] left-[140px] rotate-[6deg] scale-x-[1.4] rounded-[12px] inset-0 opacity-10 brightness-200"  />:
+        <ProgressPic className="absolute rounded-[12px] -top-[5px] left-[68px] scale-x-[1.2] inset-0 opacity-20  "  />}
       </div>
     </div>
   );
