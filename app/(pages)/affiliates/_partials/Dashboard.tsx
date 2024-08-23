@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 // import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/Button";
@@ -10,7 +10,6 @@ import { CiSearch } from "react-icons/ci";
 import { Input } from "../../../../components/ui/Input";
 import { userTitle } from "@/config/constants/affiliatestitle";
 import { userTable } from "@/config/constants/affiliates";
-
 const Dashboard = () => {
     return (
         <div className="mt-[70px] flex w-full gap-7">
@@ -65,7 +64,6 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <Button variant={"secondary"}>
-                        {" "}
                         <h2 className="text-gradient bg-gradient-to-t from-[#FFB9BE] to-[#FFFF]">
                             claim earnings
                         </h2>
@@ -89,22 +87,47 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <table className="bg-[#21201F] rounded-xl w-full mt-2">
-                    <thead className="flex px-16 justify-between py-4">
+                    <tr className="flex px-16 justify-between py-4">
                         {userTitle.map((item, index) => (
-                            <p key={index} className="w-1/4">{item}</p>
+                            <th key={index} className="w-1/4 text-left">
+                                {item}
+                            </th>
                         ))}
-                    </thead>
+                    </tr>
                     <tbody className="flex flex-col gap-1 px-6 h-60 overflow-y-auto scrollbar">
-                      {userTable.map((item, index)=>(
-                        <tr key={index} className="flex justify-between px-10 py-3 rounded-xl bg-[#272625]">
-                          <td className="font-normal text-[14px] text-start w-1/4">{item.user}</td>
-                          <td className="font-normal text-[14px] px-2 text-start w-1/4"><u className="text-[#00FF19] decoration-transparent">$ </u>{item.totalwagered}</td>
-                          <td className="font-normal text-[14px] px-2 text-start w-1/4"><u className="text-[#00FF19] decoration-transparent">$ </u>{item.totaldeposited}</td>
-                          <td className="font-normal text-[14px] px-2 text-start w-1/4 text-[#00FF19]">+{item.commissionearned}</td>
-                        </tr>
-
-
-                      ))}
+                        {userTable.length > 0 ? (
+                            userTable.map((item, index) => (
+                                <tr
+                                    key={index}
+                                    className="flex justify-between px-10 py-3 rounded-xl bg-[#272625]"
+                                >
+                                    <td className="font-normal text-[14px] text-start w-1/4">
+                                        {item.user}
+                                    </td>
+                                    <td className="font-normal text-[14px] px-2 text-start w-1/4">
+                                        <u className="text-[#00FF19] decoration-transparent">
+                                            $
+                                        </u>
+                                        {item.totalwagered}
+                                    </td>
+                                    <td className="font-normal text-[14px] px-2 text-start w-1/4">
+                                        <u className="text-[#00FF19] decoration-transparent">
+                                            $
+                                        </u>
+                                        {item.totaldeposited}
+                                    </td>
+                                    <td className="font-normal text-[14px] px-2 text-start w-1/4 text-[#00FF19]">
+                                        +{item.commissionearned}
+                                    </td>
+                                </tr>
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan={4} className="text-center">
+                                    No data available
+                                </td>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
                 {/* <Tabs defaultValue="week">

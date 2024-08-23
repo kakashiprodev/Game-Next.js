@@ -11,6 +11,7 @@ import { Button } from "../ui/Button";
 import { Dialog, DialogTitle } from "@radix-ui/react-dialog";
 import { text } from "stream/consumers";
 import { Input } from "../ui/Input";
+import AcceptTradeDialog from "./AcceptTradeDilaog";
 
 const item = {
     times: 5,
@@ -87,12 +88,17 @@ const CryptoDialog = () => {
                         Your payments will be processed through Zen Payments
                     </div>
                     <div className="mx-[26px] mb-[12px] flex gap-[9px]">
-                        <Button
-                            variant={"secondary"}
-                            className="w-[305px] h-[35px]"
-                        >
-                            PAY WITH ZEN
-                        </Button>
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button
+                                    variant={"secondary"}
+                                    className="w-[305px] h-[35px]"
+                                >
+                                    PAY WITH ZEN
+                                </Button>
+                            </DialogTrigger>
+                            <AcceptTradeDialog />
+                        </Dialog>
                     </div>
                 </div>
             </div>

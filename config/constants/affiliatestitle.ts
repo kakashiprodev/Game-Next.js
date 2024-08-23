@@ -1,1 +1,6 @@
-export const userTitle = ['User', 'Total Wagered', 'Total Deposited', 'Commission Earned']
+export const userTitle = [
+    "User",
+    "Total Wagered",
+    "Total Deposited",
+    "Commission Earned",
+];
